@@ -1,0 +1,12 @@
+# Build output
+html/
+
+# Compiled SVGs (regenerated from .drawio)
+src/*.svg
+
+# OS files
+.DS_Store
+
+# Editor files
+*.swp
+*~
