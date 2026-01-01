@@ -1,0 +1,12 @@
+{
+  "name": "mdslides-presentations",
+  "version": "1.0.0",
+  "description": "Create reveal.js presentations from Markdown with interactive demos and diagrams",
+  "author": {
+    "name": "Thomas Antony",
+    "email": "mail@thomasantony.com"
+  },
+  "repository": "https://github.com/thomasantony/mdslides-presentations",
+  "license": "MIT",
+  "keywords": ["presentations", "reveal.js", "mdslides", "slides", "demos"]
+}

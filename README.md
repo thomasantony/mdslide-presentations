@@ -126,7 +126,27 @@ cp -R demos/my-demo html/demos/
 
 ## Claude Code Integration
 
-This repo includes a `SKILL.md` for use with [Claude Code](https://claude.ai/code). The skill provides quick reference for slide syntax and embedding patterns.
+This repo is a [Claude Code plugin](https://code.claude.com/docs/en/plugins) with a skill for creating presentations.
+
+### Installation
+
+```bash
+# Add as a marketplace (one-time)
+/plugin marketplace add thomasantony/mdslides-presentations
+
+# Install the plugin
+/plugin install mdslides-presentations@thomasantony-mdslides-presentations
+```
+
+Once installed, Claude will automatically offer to use the `mdslides-presentations` skill when you're working on presentations.
+
+### Manual Use
+
+You can also invoke the skill directly:
+
+```
+Use the mdslides-presentations skill to help me create a presentation
+```
 
 ## License
 
