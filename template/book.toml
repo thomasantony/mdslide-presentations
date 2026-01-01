@@ -1,0 +1,5 @@
+[book]
+title = "My Presentation"
+authors = ["Your Name"]
+language = "en"
+src = "src"

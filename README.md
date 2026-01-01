@@ -49,6 +49,7 @@ python -m http.server 8000 -d html/
 
 ```
 my-presentation/
+├── book.toml         # Required: mdslides config (title, author)
 ├── build.sh          # Build script
 ├── template.html     # Reveal.js HTML template
 ├── src/
@@ -59,6 +60,8 @@ my-presentation/
 │       └── index.html
 └── html/             # Build output (generated)
 ```
+
+**Note:** mdslides outputs HTML with the same name as the .md file (e.g., `slides.md` → `slides.html`). The build script renames it to `index.html` for convenience.
 
 ## Writing Slides
 

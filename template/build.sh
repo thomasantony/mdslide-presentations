@@ -21,9 +21,12 @@ fi
 echo "Building slides..."
 mdslides --output-dir ./html --template ./template.html
 
-# Rename output to index.html (mdslides uses the markdown filename)
+# Rename output to index.html
+# Note: mdslides outputs HTML with same name as the .md file (e.g., slides.md → slides.html)
+# We rename to index.html for easier serving
 for f in html/*.html; do
     if [ "$f" != "html/index.html" ]; then
+        echo "Renaming $f to index.html"
         mv "$f" html/index.html
         break
     fi

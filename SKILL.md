@@ -71,11 +71,14 @@ The demo folder should be copied to `html/` in build.sh.
 
 | File | Purpose |
 |------|---------|
+| `book.toml` | Required config for mdslides (title, author, src dir) |
 | `src/*.md` | Slide content (Markdown) |
 | `src/*.drawio` | Diagrams (optional) |
 | `template.html` | Reveal.js template with custom styles |
 | `demos/` | Interactive JavaScript demos |
 | `build.sh` | Compiles everything to `html/` |
+
+**Note:** mdslides outputs HTML with the same name as the .md file (e.g., `slides.md` → `slides.html`). The build script renames it to `index.html`.
 
 ## Template Features
 
