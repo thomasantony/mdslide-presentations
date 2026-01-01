@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/simple.css" id="theme">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/idea.min.css">
+    <title>$TITLE</title>
+    <style>
+        .reveal {
+            background-color: #faf8f5;
+        }
+
+        /* Header styling */
+        .reveal h1 {
+            font-size: 1.8em;
+            margin-top: 0.2em;
+            margin-bottom: 0.4em;
+        }
+
+        .reveal h2 {
+            font-size: 1.4em;
+            margin-top: 0;
+            margin-bottom: 0.5em;
+            padding-top: 0.3em;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 0.3em;
+        }
+
+        .reveal h3 {
+            font-size: 1.1em;
+            margin-top: 0.3em;
+            margin-bottom: 0.3em;
+        }
+
+        .reveal h4 {
+            font-size: 0.95em;
+            margin-top: 0.2em;
+            margin-bottom: 0.2em;
+        }
+
+        /* Slide content - align to top */
+        .reveal .slides section {
+            top: 0 !important;
+            padding-top: 0.5em;
+        }
+
+        .reveal .slides > section,
+        .reveal .slides > section > section {
+            padding: 0.5em 1em;
+            width: 95% !important;
+        }
+
+        /* Slides with embeds - full width, no padding */
+        .reveal .slides section:has(embed),
+        .reveal .slides section:has(iframe) {
+            padding: 0 !important;
+            width: 100% !important;
+        }
+
+        /* Container for embedded demos */
+        .reveal .slides section .container-container {
+            height: calc(100vh - 220px) !important;
+            width: 100% !important;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Tighter list spacing */
+        .reveal ul, .reveal ol {
+            margin-bottom: 0.5em;
+        }
+
+        .reveal li {
+            margin-bottom: 0.3em;
+            line-height: 1.3;
+        }
+
+        .reveal p {
+            margin-bottom: 0.5em;
+            line-height: 1.4;
+        }
+
+        .reveal h2 code {
+            font-size: 80%;
+        }
+
+        .reveal code {
+            background: #f0f0f0;
+        }
+
+        .reveal pre code {
+            background: #fcfcfc;
+        }
+
+        .reveal blockquote {
+            background: #eee;
+            width: 85%;
+        }
+
+        .reveal blockquote p::before {
+            content: open-quote;
+        }
+
+        .reveal blockquote p::after {
+            content: close-quote;
+        }
+
+        /* Two-column layout */
+        .columns {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1rem;
+        }
+
+        /* Scrollable slides for long content */
+        .scrollable-slide {
+            height: 800px;
+            overflow-y: auto !important;
+        }
+
+        /* PDF export: hide embeds and show placeholder */
+        @media print {
+            .container-container {
+                display: none !important;
+            }
+            .demo-pdf-placeholder {
+                display: flex !important;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 60vh;
+                background: #f5f5f5;
+                border: 2px dashed #ccc;
+                border-radius: 8px;
+                margin: 2em;
+            }
+            .demo-pdf-placeholder h3 {
+                font-size: 1.5em;
+                color: #333;
+                margin-bottom: 0.5em;
+            }
+            .demo-pdf-placeholder p {
+                font-size: 1em;
+                color: #666;
+            }
+        }
+
+        /* Hide placeholder in normal view */
+        .demo-pdf-placeholder {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section data-markdown>
+                <textarea data-template>
+$CONTENT
+                </textarea>
+            </section>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/notes/notes.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/markdown/markdown.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/highlight/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/math/math.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            Reveal.initialize({
+                controls: true,
+                controlsTutorial: true,
+                controlsLayout: 'bottom-right',
+                controlsBackArrows: 'faded',
+                progress: true,
+                slideNumber: true,
+                showSlideNumber: 'all',
+                hash: true,
+                history: false,
+                keyboard: true,
+                overview: true,
+                disableLayout: false,
+                center: false,
+                touch: true,
+                loop: false,
+                rtl: false,
+                navigationMode: 'default',
+                shuffle: false,
+                fragments: true,
+                fragmentInURL: false,
+                embedded: false,
+                help: true,
+                showNotes: false,
+                autoPlayMedia: null,
+                preloadIframes: null,
+                autoSlide: 0,
+                autoSlideStoppable: true,
+                autoSlideMethod: Reveal.navigateNext,
+                defaultTiming: 60,
+                totalTime: 1800,
+                minimumTimePerSlide: 0,
+                mouseWheel: false,
+                hideInactiveCursor: true,
+                hideCursorTime: 5000,
+                hideAddressBar: true,
+                previewLinks: false,
+                transition: 'none',
+                transitionSpeed: 'default',
+                backgroundTransition: 'fade',
+                viewDistance: 3,
+                mobileViewDistance: 3,
+                parallaxBackgroundImage: '',
+                parallaxBackgroundSize: '',
+                parallaxBackgroundHorizontal: null,
+                parallaxBackgroundVertical: null,
+                display: 'block',
+                width: '100%',
+                height: '100%',
+                margin: 0.01,
+                minScale: 0.2,
+                maxScale: 1.5,
+                pdfSeparateFragments: true,
+                pdfMaxPagesPerSlide: 1,
+                highlight: {
+                    highlightOnLoad: false
+                },
+                mathjax3: {
+                    mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js',
+                    tex: {
+                        inlineMath: [['$', '$'], ['\\(', '\\)']],
+                    },
+                    options: {
+                        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+                    },
+                },
+                plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.MathJax3]
+            }).then(() => {
+                // Highlight code blocks
+                const highlight = Reveal.getPlugin('highlight');
+                document.querySelectorAll('pre code').forEach((el) => {
+                    highlight.highlightBlock(el);
+                });
+            });
+
+            // Handle scrollable slides
+            function resetSlideScrolling(slide) {
+                if (slide) slide.classList.remove('scrollable-slide');
+            }
+
+            function handleSlideScrolling(slide) {
+                if (slide && slide.offsetHeight >= 800) {
+                    slide.classList.add('scrollable-slide');
+                }
+            }
+
+            Reveal.addEventListener('ready', function (event) {
+                handleSlideScrolling(event.currentSlide);
+            });
+
+            Reveal.addEventListener('slidechanged', function (event) {
+                resetSlideScrolling(event.previousSlide);
+                handleSlideScrolling(event.currentSlide);
+            });
+        });
+    </script>
+</body>
+
+</html>
